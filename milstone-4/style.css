@@ -1,0 +1,129 @@
+/*Styling form and resume sections*/
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;/*A margin of 20px refers to the amount of space applied outside the border of an element, means 
+    there will be a 20-pixel sapce around all four sides (top,right,bottom, and left) of the element. The margin separates
+    the element from the edges of its container*/
+    padding: 0;
+    background-color: white;
+}
+
+form {
+    margin: auto;
+    background-color:  rgb(228, 242, 255);
+    border-radius: 8px; /*border-radius form tag jis may sara code hy, us k container k corner ko round shape may 
+    karnay k liye yaha use hua hy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;/*In CSS, the max-width property is used to set the maximum width an element can have. IT ensure 
+    that the element's width does not exceed the specified value, even if the content inside the it requires more space*/
+}
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+fieldset {
+    border: 2px solid skyblue;
+    border-radius: 8px; /*from k tag k under jitni bhe fieldset k boxes hy, unk 4ro corners ko around shape may karnay k
+    liye yaha use kiya hy*/
+    padding: 20px;/*form k tag ander jo "fieldset" k boxes hy in boxes ka form k border say distance create karnay k liye, 
+    yaha padding use ki hy*/
+    background-color: aliceblue;/*fieldst k boxes k background ka color set karhe hy yaha*/
+
+}
+
+legend {/*fieldset k tag k ander "legend" k tag use hota hy...jo kisi bhe fieldset may "heading" dynay k liye use hota hy.
+yaha main "legend" pay "Css* apply karraha ho*/
+
+font-weight: bold;/*font-weight is the property of "css" use to specify the thickness or boldness of the text*/
+text-align: left;
+color: rgb(34, 29, 29)
+
+}
+
+label {
+    display:block;/*ye "display:block" her label k tag pay <br> break line laga dyga before & after laga dyta hy...
+    isay her lebal ka tag new line may display hoga....second ye k, is tag ko laganay say pori line booked hojati hy
+    means ab os line may koi kuch "type" nhi karsakhta hy....ye main nay isliye kiya k meray pas is "resume" may kafi saray
+    labels hy like name, email, phone, eduction skills etc...ab her lebal k agay pori line khali pari hy...koi user 
+    bymistake label k agay, kuch na type kardy..sirf "input/textarea' he container may type karay...isliye main nay ye
+    css ki ye property use ki hy.*/
+    margin-top: 10px;
+    color: black;
+    
+}
+
+input, textarea {/*yaha may input or textarea k tag may 1 sth css apply karaha ho*/
+    margin: 4px;
+    padding: 8px;/*fieldset k ander input, or textarea ka bhe tags hy...in tags k through hum user say jo "text/data" layge
+    is text/data ka "fieldset" k boxes k border say jo distance hoga wo 8px hoga.*/
+    width: calc(100% - 1px);/*yaha main nay "input/textarea" k container ki width 100% kardi,takay jab user data submit kary
+    to wo box ki full line ka use karsaky*/
+    border: 1px solid skyblue;/*yaha border dy di "input/textarea container ko*/
+    border-radius: 4px;/*or yaha box k 4 corners ko round shape dy diya*/
+    box-sizing: border-box;/*yaha jo input/textarea k boxes/container hy unko "border-box" banadiya, jisay wo 
+    "fieldset k boxes say nhi touch hogay, na uka border, na text, na padding, na margina...balkay 
+    "fieldset" k container k border k ander ander he rahegay.*/
+}
+
+button {
+    display: block;/*button k agay koi bymistake kuch na likhdy...or button separate line my show ho, q k before & after
+    <br> tag lag jata hy...isliye use kiya...same reason i mention above in detail*/
+
+    width: 100%;/*jab oper "dsiplay: block" use karliya tou mujhy pori line ko cover karnay k liye "width" 100%
+    karnay ki zarort nhi thi...but phr bhe kisi andhy ko "Generate Resume" ka button nazar na ae isliye 100% kardi*/
+    background-color: rgb(46, 117, 139);
+    color: black;/*plan color likha towo text pay he apply hoga*/
+    border:none;/*jab humnay "html" may button banaya tha...to button bydefault "borders" rakhta hy...par mujhy "border"
+    nhi chaheye...isye main nay yaha "border: none" ka use kar k border ko khatam kardiya hy.*/
+    border-radius:  4px;
+    box-shadow: 0 4px 8px;
+    font-size: 18px;
+
+}
+
+button :hover {
+    color:blue /*button :hover tab use hota hy jab hum kisi button pay click karay or oska color change ho 1sec k liye
+                   wo color konsa hoga wo hum "button :hover" k zariye select karsakhty hy jesay main yaha "blue" choice kiya*/
+                
+}
+
+#resume-display { 
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    background-color: rgb(228, 242, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+
+    /*Making the resume editable*/
+    outline: none;/*ab hum resume generate kary thay to wha pay 1 black color ki outline ajati thi..eo w*/
+
+}
+
+#resume-display p{
+    font-weight: normal;
+    font-size: medium;
+}
+
+#resume-display h2
+#resume-display h3 {
+    color: black;
+    font-weight: bold;
+}
+
+/*Note:acha ye resume display may main nay (p)paragragh/text, (h2,h3)headings, or resume-display(container-border), ko
+alag alag isliye set kiya, k mujhy heading ko bold karna tha or user giving text ko plan...acha bold or plan 
+karnay k liye "font-weight" ka use hota hy, problem ye arahe thi k agar main bold karaha tha headings ko, tou 
+heading k sth sth text bhe bold horaha tha...isliye mujhy her cheez ki styling alag alag karni pari,tou sub say phelay 
+"#resume-display" main nay resume k container k border ko set kiya, then heading(heading) or paragraph(p) ki alag alag 
+settings ki...tou meri resume ka display bilkul perfect aya means(heading bhe bold hogae or text bhe plan hogaya..heading 
+ko bold bhe ...isko he kehtay hy "External css styling" 
+
+Sawal ye hy k "script.ts" file may bhe jakar headings ko "bold" kiya jasakhta hy, tou jawab hy han bilkul..
+Par waha "bold" na kar k yaha "bold" karnay ki waja bhi yahi thi.. k mera "text" bhe bold horaha tha...or "font-weight: "normal"
+use karnay say bhe mera text "unbold" horaha tha...phr "Chatgpt" bata k esa karlo to karliya islye phr yaha 
+styling ki or alag alag ki tag may*/

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Editable Resume Builder</h1>
+    <form id="resume-form"><!--form ka tag hum tag use karty hy jab hum user say data layna required ho-->
+        <fieldset><!--form k tag may hum "fieldset" k tag use karty hy, is tag may hum related data jesy name,num,email wegera use say talab karty hy-->
+            <legend>Personal Information</legend><!--lengend tag is use as a caption(heading) for a "fieldset" tag -->
+            <label for="name">Name:</label><!--label ka tag may hum particular field ko label-name dyty hy-->
+            <input type="text" id="name" placeholder="Enter your name" required><!--Input k tag may hum user say data lay rahe hoty hy, jesay yaha "name" manga hy, or "input tag" sirf single line data layta hy-->
+            <!--Remember "type" ka attribute hum input k tag may use sirf isliye karty hy, k hum ensure karna chata hy, k hamary "form" ki field behave as expected-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required><!--imput k tag may "required" dalnay say, user ko data dyna compulsory hojata hy...agar user nay data na diya to "form" submit he nhi hoga.-->
+
+            <label for="phone">Phone No:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Education</legend>
+            <label for="education">Education:</label>
+            <textarea id="education" placeholder="Enter your education" rows="4" required></textarea><!--"Textarea" k tag say bhe hum user say data lay rahe hoty hy,jesay "input" k tag say layty hy. farak ye hy k jab user say humay esa data layna ho jo multpile lines may ae, tab hum "textarea" k tag ka use karty hy-->
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience</legend>
+            <label for="experience">Experience:</label>
+            <textarea id="experience" placeholder="Enter your work experience" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">skills:</label>
+            <textarea id="skills" placeholder="Enter your work experience" rows="4" required></textarea>
+        </fieldset>
+        <br>
+        <button type="submit"><b>Generate Resume<b></b></button>
+    </form>
+    <br>
+    <!--Dynamic and Editable Resume-->
+    <div id="resume-display" contenteditable="true"><!--contenteditable attribute jis bhe element sth lagae wo osk content jo browser may directly editable banadyta hy-->
+        <!--Resume will be generated below-->
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
